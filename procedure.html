@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Virtual Labs</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-indigo-100">
+    <nav class="flex shadow-xl z-10 items-center justify-between flex-wrap bg-green-200 p-6 top-0 sticky">
+      <div class="flex items-center flex-shrink-0 text-white mr-6">
+        <img src="/images/logo.png" class="h-20 w-30" />
+      </div>
+
+      <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+        <div class="text-sm lg:flex-grow ">
+          <a
+            href="aim.html"
+            class="block mr-7 py-2 px-4 lg:inline-block lg:mt-0 text-black hover:text-black hover:bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center"
+          >
+            Aim
+          </a>
+          <a
+            href="procedure.html"
+            class="bg-gray-300 mr-7 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center"
+          >
+            Procedure
+          </a>
+          <a
+            href="simulation.html"
+            class="block mr-7 py-2 px-4 lg:inline-block lg:mt-0 text-black hover:text-black hover:bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center""
+          >
+            Simulation
+          </a>
+          <a
+            href="contributors.html"
+            class="block mr-7 py-2 px-4 lg:inline-block lg:mt-0 text-black hover:text-black hover:bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center"
+          >
+            Contributors
+        </a>
+        </div>
+      </div>
+    </nav>
+    <div class="relative m-10">
+    <p style='margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;'><span style="font-size:20px;color:black;">History:</span><span style="font-size:16px;color:black;"><br>&nbsp;</span></p>
+<p style='margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:17px;font-family:"Calibri",sans-serif;'><span style="color:black;">The DES algorithm was developed in 1975 and was considered fairly strong and superior for that time and computation power at that time but with newer developments in computer systems and increasing computational power it became breakable faster and the process became relatively easy. It was cracked for the first time in 1997, so a more robust algorithm had to be developed. Triple DES was created to fix the problem but was relatively slower so was not adapted by most. Hence, the AES was developed, also known as the Rijnadael algorithm, is a symmetric block cipher algorithm with block size of 128-bits. Keys of 128, 192 and 256 bits are used to convert these individual blocks, once encrypted the blocks are joined together to form the ciphertext.</span></p>
+<p style='margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;'><span style="color:black;">&nbsp;</span></p>
+<p style='margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;'><span style="font-size:21px;color:black;">Following are the steps to perform AES algorithm:</span></p>
+<p style='margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;'><span style="color:black;">&nbsp;</span></p>
+<p style='margin-top:0in;margin-right:0in;margin-bottom:8.0pt;margin-left:0in;line-height:107%;font-size:15px;font-family:"Calibri",sans-serif;'><span style="font-size:20px;line-height:107%;">Steps for key expansion:</span></p>
+<ol style="list-style-type: decimal;">
+    <li style='margin-left:0.35in'>For the first four words <strong>w<sub>0</sub></strong>, <strong>w<sub>1</sub></strong>, <strong>w<sub>2</sub></strong> and <strong>w<sub>3</sub></strong>, consider the cipher key as an array of 16 bytes (<strong>k<sub>0</sub></strong> to <strong>k<sub>15</sub></strong>). Then, <strong>w<sub>0</sub></strong>= <strong>k<sub>0</sub></strong> to <strong>k<sub>3</sub></strong>, <strong>w<sub>1</sub></strong>= <strong>k<sub>4</sub></strong> to <strong>k<sub>7</sub></strong>, <strong>w<sub>2</sub></strong>= <strong>k<sub>8</sub></strong> to <strong>k<sub>11</sub></strong> and <strong>w<sub>3</sub></strong>= <strong>k<sub>12</sub></strong> to <strong>k<sub>15</sub></strong>.</li>
+    <li style='margin-left:0.35in'>For remaining words i.e., <strong>w<sub>4</sub></strong> to <strong>w<sub>43</sub>&nbsp;</strong>the procedure to follow is:<ol style="list-style-type: lower-alpha;">
+            <li style='margin-left:0.45in'>If i mod 4 &ne; 0, <strong>w<sub>i</sub></strong>= <strong>w<sub>i-1</sub></strong> <span style='font-family:"Cambria Math",serif;'>&oplus;</span> <strong>w<sub>i-4</sub></strong>.</li>
+            <li style='margin-left:0.45in'>If i mod 4 = 0, <strong>w<sub>i</sub></strong> = <strong>t</strong> <span style='font-family:"Cambria Math",serif;'>&oplus;</span> <strong>w<sub>i-4</sub></strong>, where</li>
+        </ol>
+    </li>
+</ol>
+<p style='margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:1.0in;line-height:107%;font-size:15px;font-family:"Calibri",sans-serif;'><strong>t&nbsp;</strong>= SubWord (RotWord (<strong>w<sub>i-1</sub></strong>)) <span style='font-family:"Cambria Math",serif;'>&oplus;</span> <strong>RCon<sub>i/4</sub></strong></p>
+<p style='margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:1.0in;line-height:107%;font-size:15px;font-family:"Calibri",sans-serif;'><strong>RotWord</strong> is similar to ShiftRows transformation, but is applied to only one row i.e., it takes a word (4 bytes) and shifts each byte to left with wrapping.</p>
+<p style='margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:1.0in;line-height:107%;font-size:15px;font-family:"Calibri",sans-serif;'><strong>SubWord</strong> is similar to SubBytes transformation, but is applied only to four bytes i.e., it takes each byte in the word and substitutes another byte for it from a predefined 16 x 16 (0 to F x 0 to F) matrix.</p>
+<p style='margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:1.0in;line-height:107%;font-size:15px;font-family:"Calibri",sans-serif;'><strong>Round Constants</strong> or <strong>RCon</strong>, is a 4-byte value with three rightmost bytes as zero. The table below shows values for AES-128 with 10 rounds.</p><br>
+<table style="margin-left:1.0in;border-collapse:collapse;border:none;">
+    <tbody>
+        <tr>
+            <td style="width: 40.5pt;border: 1pt solid windowtext;padding: 0in 5.4pt;vertical-align: top;">
+                <p style='margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;margin:0in;text-align:center;'>Round</p>
+            </td>
+            <td style="width: 85.5pt;border-top: 1pt solid windowtext;border-right: 1pt solid windowtext;border-bottom: 1pt solid windowtext;border-image: initial;border-left: none;padding: 0in 5.4pt;vertical-align: top;">
+                <p style='margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;margin:0in;text-align:center;'>RCon</p>
+            </td>
+            <td style="width: 40.5pt;border-top: 1pt solid windowtext;border-right: 1pt solid windowtext;border-bottom: 1pt solid windowtext;border-image: initial;border-left: none;padding: 0in 5.4pt;vertical-align: top;">
+                <p style='margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;margin:0in;text-align:center;'>Round</p>
+            </td>
+            <td style="width: 85.5pt;border-top: 1pt solid windowtext;border-right: 1pt solid windowtext;border-bottom: 1pt solid windowtext;border-image: initial;border-left: none;padding: 0in 5.4pt;vertical-align: top;">
+                <p style='margin-top:0in;margin-right:0in;margin-bottom:8.0pt;margin-left:.5in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;margin:0in;text-align:center;'>RCon</p>
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 40.5pt;border-right: 1pt solid windowtext;border-bottom: 1pt solid windowtext;border-left: 1pt solid windowtext;border-image: initial;border-top: none;padding: 0in 5.4pt;vertical-align: top;">
+                <p style='margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;margin:0in;text-align:center;'>1</p>
+            </td>
+            <td style="width: 85.5pt;border-top: none;border-left: none;border-bottom: 1pt solid windowtext;border-right: 1pt solid windowtext;padding: 0in 5.4pt;vertical-align: top;">
+                <p style='margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;margin:0in;text-align:center;'>(<strong><u>01</u></strong> 00 00 00)<sub>16</sub></p>
+            </td>
+            <td style="width: 40.5pt;border-top: none;border-left: none;border-bottom: 1pt solid windowtext;border-right: 1pt solid windowtext;padding: 0in 5.4pt;vertical-align: top;">
+                <p style='margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;margin:0in;text-align:center;'>6</p>
+            </td>
+            <td style="width: 85.5pt;border-top: none;border-left: none;border-bottom: 1pt solid windowtext;border-right: 1pt solid windowtext;padding: 0in 5.4pt;vertical-align: top;">
+                <p style='margin-top:0in;margin-right:0in;margin-bottom:8.0pt;margin-left:.5in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;margin:0in;text-align:center;'>(<strong><u>20</u></strong> 00 00 00)<sub>16</sub></p>
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 40.5pt;border-right: 1pt solid windowtext;border-bottom: 1pt solid windowtext;border-left: 1pt solid windowtext;border-image: initial;border-top: none;padding: 0in 5.4pt;vertical-align: top;">
+                <p style='margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;margin:0in;text-align:center;'>2</p>
+            </td>
+            <td style="width: 85.5pt;border-top: none;border-left: none;border-bottom: 1pt solid windowtext;border-right: 1pt solid windowtext;padding: 0in 5.4pt;vertical-align: top;">
+                <p style='margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;margin:0in;text-align:center;'>(<strong><u>02</u></strong> 00 00 00)<sub>16</sub></p>
+            </td>
+            <td style="width: 40.5pt;border-top: none;border-left: none;border-bottom: 1pt solid windowtext;border-right: 1pt solid windowtext;padding: 0in 5.4pt;vertical-align: top;">
+                <p style='margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;margin:0in;text-align:center;'>7</p>
+            </td>
+            <td style="width: 85.5pt;border-top: none;border-left: none;border-bottom: 1pt solid windowtext;border-right: 1pt solid windowtext;padding: 0in 5.4pt;vertical-align: top;">
+                <p style='margin-top:0in;margin-right:0in;margin-bottom:8.0pt;margin-left:.5in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;margin:0in;text-align:center;'>(<strong><u>40</u></strong> 00 00 00)<sub>16</sub></p>
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 40.5pt;border-right: 1pt solid windowtext;border-bottom: 1pt solid windowtext;border-left: 1pt solid windowtext;border-image: initial;border-top: none;padding: 0in 5.4pt;vertical-align: top;">
+                <p style='margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;margin:0in;text-align:center;'>3</p>
+            </td>
+            <td style="width: 85.5pt;border-top: none;border-left: none;border-bottom: 1pt solid windowtext;border-right: 1pt solid windowtext;padding: 0in 5.4pt;vertical-align: top;">
+                <p style='margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;margin:0in;text-align:center;'>(<strong><u>04</u></strong> 00 00 00)<sub>16</sub></p>
+            </td>
+            <td style="width: 40.5pt;border-top: none;border-left: none;border-bottom: 1pt solid windowtext;border-right: 1pt solid windowtext;padding: 0in 5.4pt;vertical-align: top;">
+                <p style='margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;margin:0in;text-align:center;'>8</p>
+            </td>
+            <td style="width: 85.5pt;border-top: none;border-left: none;border-bottom: 1pt solid windowtext;border-right: 1pt solid windowtext;padding: 0in 5.4pt;vertical-align: top;">
+                <p style='margin-top:0in;margin-right:0in;margin-bottom:8.0pt;margin-left:.5in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;margin:0in;text-align:center;'>(<strong><u>80</u></strong> 00 00 00)<sub>16</sub></p>
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 40.5pt;border-right: 1pt solid windowtext;border-bottom: 1pt solid windowtext;border-left: 1pt solid windowtext;border-image: initial;border-top: none;padding: 0in 5.4pt;vertical-align: top;">
+                <p style='margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;margin:0in;text-align:center;'>4</p>
+            </td>
+            <td style="width: 85.5pt;border-top: none;border-left: none;border-bottom: 1pt solid windowtext;border-right: 1pt solid windowtext;padding: 0in 5.4pt;vertical-align: top;">
+                <p style='margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;margin:0in;text-align:center;'>(<strong><u>08</u></strong> 00 00 00)<sub>16</sub></p>
+            </td>
+            <td style="width: 40.5pt;border-top: none;border-left: none;border-bottom: 1pt solid windowtext;border-right: 1pt solid windowtext;padding: 0in 5.4pt;vertical-align: top;">
+                <p style='margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;margin:0in;text-align:center;'>9</p>
+            </td>
+            <td style="width: 85.5pt;border-top: none;border-left: none;border-bottom: 1pt solid windowtext;border-right: 1pt solid windowtext;padding: 0in 5.4pt;vertical-align: top;">
+                <p style='margin-top:0in;margin-right:0in;margin-bottom:8.0pt;margin-left:.5in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;margin:0in;text-align:center;'>(<strong><u>1B</u></strong> 00 00 00)<sub>16</sub></p>
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 40.5pt;border-right: 1pt solid windowtext;border-bottom: 1pt solid windowtext;border-left: 1pt solid windowtext;border-image: initial;border-top: none;padding: 0in 5.4pt;vertical-align: top;">
+                <p style='margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;margin:0in;text-align:center;'>5</p>
+            </td>
+            <td style="width: 85.5pt;border-top: none;border-left: none;border-bottom: 1pt solid windowtext;border-right: 1pt solid windowtext;padding: 0in 5.4pt;vertical-align: top;">
+                <p style='margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;margin:0in;text-align:center;'>(<strong><u>10</u></strong> 00 00 00)<sub>16</sub></p>
+            </td>
+            <td style="width: 40.5pt;border-top: none;border-left: none;border-bottom: 1pt solid windowtext;border-right: 1pt solid windowtext;padding: 0in 5.4pt;vertical-align: top;">
+                <p style='margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;margin:0in;text-align:center;'>10</p>
+            </td>
+            <td style="width: 85.5pt;border-top: none;border-left: none;border-bottom: 1pt solid windowtext;border-right: 1pt solid windowtext;padding: 0in 5.4pt;vertical-align: top;">
+                <p style='margin-top:0in;margin-right:0in;margin-bottom:8.0pt;margin-left:.5in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;margin:0in;text-align:center;'>(<strong><u>36</u></strong> 00 00 00)<sub>16</sub></p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p style='margin-top:0in;margin-right:0in;margin-bottom:8.0pt;margin-left:0in;line-height:107%;font-size:15px;font-family:"Calibri",sans-serif;'>&nbsp;</p>
+<p style='margin-top:0in;margin-right:0in;margin-bottom:8.0pt;margin-left:0in;line-height:107%;font-size:15px;font-family:"Calibri",sans-serif;'><span style="font-size:20px;line-height:107%;">Encryption:</span></p>
+<p>&nbsp; &nbsp; &nbsp; 1. Shift Byte Transformation</p>
+<ul style="list-style-type: disc;margin-left:0.25in;">
+    <li style='margin-left:.5in;'>&lsquo;sbox&rsquo; is a <strong>16 x 16</strong> matrix consisting of total <strong>256 entries of 8 bit</strong> each.</li>
+    <li style='margin-left:.5in;'><strong>Each byte</strong> of the state array is split in <strong>two hexadecimal values</strong>.</li>
+    <li style='margin-left:.5in;'>These are row and column values for to sbox to generate the <strong>new value</strong> for <strong>final state array</strong>.</li>
+</ul>
+<p>&nbsp; &nbsp; &nbsp; 2. Shift Row Transform</p>
+<ul style="list-style-type: disc;margin-left:0.25in;">
+    <li style='margin-left:.5in;'>Shifts <strong>elements of a row to</strong> <strong>left</strong> depending on the row they are present in.</li>
+    <li style='margin-left:.5in;'><strong>First</strong> row remains<strong>&nbsp;unaffected</strong>.</li>
+    <li style='margin-left:.5in;'><strong>Second</strong> row elements are shifted <strong>one</strong> place to the left.</li>
+    <li style='margin-left:.5in;'><strong>Third</strong> row elements are shifted <strong>two</strong> places to left.</li>
+    <li style='margin-left:.5in;'><strong>Fourth</strong> row elements are shifted <strong>three</strong> places to the left.</li>
+</ul>
+<p>&nbsp; &nbsp; &nbsp; 3. Mixed Column Transform</p>
+<ul style="list-style-type: disc;margin-left:0.25in;">
+    <li style='margin-left:.5in;'>A <strong>constant</strong> matrix is multiplied to <strong>each column</strong> of state array.</li>
+    <li style='margin-left:.5in;'>It is important that the <strong>constant matrix is same</strong> for all columns and this step is <strong>skipped for the last round</strong>.</li>
+</ul>
+<p>&nbsp; &nbsp; &nbsp; 4. Add Round Key Transform</p>
+<ul style="list-style-type: disc;margin-left:0.25in;">
+    <li style='margin-left:.5in;'>The respective key for the round is <strong>XOR&rsquo;d</strong> with state array generated in <strong>previous round</strong>.</li>
+    <li style='margin-left:.5in;'>The resulting array is then passed as the <strong>new step array</strong> for the next round.</li>
+    <li style='margin-left:.5in;'>The resulting array of last round becomes the <strong>ciphertext for the block</strong>.</li>
+</ul>
+</div>
+  </body>
+</html>
